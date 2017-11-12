@@ -38,11 +38,12 @@ Delegate method is called on every touch on the Placement.
 * `BOOL` — Return `false` to abort the default behaviour, the app should display the recommendation content on its own (for example, using an in-app browser).
 > **IMPORTANT**: Aborts only for organic items!  
 >   
-> Return `true` - this will allow the app to implement a click-through and continue to the default behaviour.### `- (void)webView:(UIView*) webView didLoadPlacementNamed:(NSString *) placementName`  
+> Return `true` - this will allow the app to implement a click-through and continue to the default behaviour.### `- (void)webView:(UIView*) webView didLoadPlacementNamed:(NSString *) placementName withHeight:(CGFloat)height`  
 Delegate method is called on every successful load of Placement.
 #### **Parameters:**
 * `webView` —  webView which loaded the placement
 * `placementName` — placement name
+* `withHeight` — widget height
 ### `- (void)webView:(UIView*) webView didFailToLoadPlacementNamed:(NSString *) placementName withErrorMessage:(NSString *) error`
 Delegate method is called on every successful load of Placement.
 #### **Parameters:**
