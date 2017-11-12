@@ -109,7 +109,7 @@ For example, you may choose to implement `TaboolaJSDelegate` in your view contro
 
 - (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
 
-	// implement click handling code here
+    // implement click handling code here
     return YES;
 }
 
