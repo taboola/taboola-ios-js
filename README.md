@@ -137,7 +137,7 @@ App developers may choose to implement the `TaboolaJSDelegate` optional methods 
 Implement these methods in the same object which handles the clicks and implements  `TaboolaJSDelegate` 
 
 ```
-- (void)webView:(WebView) webView didLoadPlacementNamed:(NSString*) placementName;
+- (void)webView:(WebView) webView didLoadPlacementNamed:(NSString*) placementName withHeight:(CGFloat)height;
 - (void)webView:(WebView) webView didFailToLoadPlacementNamed:(NSString*) placementName withErrorMessage:(NSString*) error;
 
 ```
