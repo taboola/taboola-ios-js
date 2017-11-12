@@ -214,7 +214,7 @@ _taboola["mobile"].push({
 ```
 
 ### 2.1 Native code changes
-follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side within your app.
+Follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side within your app.
  
 
 ## 3. Example App
