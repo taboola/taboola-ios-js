@@ -221,7 +221,7 @@ follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side
 This repository includes an example Android app which uses the `TaboolaJS`. Review it and see how `TaboolaJS` is integrated in practice.
 
 ## 4. SDK Reference
-[TaboolaJS Reference](/TaboolaJSReference.md)
+[TaboolaJS Reference](./doc/Taboola%20JS%20SDK%20iOS%20Reference.md)
 
 ## 5. License
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at [https://github.com/taboola/taboola-ios/blob/master/LICENSE](https://github.com/taboola/taboola-ios/blob/master/LICENSE).
