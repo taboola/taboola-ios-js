@@ -14,7 +14,7 @@
 
 `TaboolaJS` SDK integration allows app developers to show Taboola widgets within their own webviews side-to-side with other content from the app.
 
-If you already have a Taboola plain JS widget implemented, you can easily migrate the TaboolaJS and gain the full benefits of using the SDK. the changes required are minimal. Please refer to section 2 [Migrating from Taboola plain JS integration](#2-migrating-from-taboola-plain-js-integration) for more details about how to migrate. 
+If you already have a Taboola plain JS widget implemented, you can easily migrate the TaboolaJS and gain the full benefits of using the SDK. The changes required are minimal. Please refer to section 2 [Migrating from Taboola plain JS integration](#2-migrating-from-taboola-plain-js-integration) for more details about how to migrate. 
 
 If you are implementing a new Taboola integration in your app, `TaboolaJS` should be fast and easy to implement, and will give you the benefits of both HTML/JS and native.
 
