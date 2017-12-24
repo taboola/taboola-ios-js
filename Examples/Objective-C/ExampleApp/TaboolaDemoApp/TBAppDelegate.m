@@ -6,6 +6,7 @@
 #import "TBAppDelegate.h"
 #import "TBWebViewJSViewController.h"
 #import "TBWKWebViewJSController.h"
+#import "TBWKFeedViewJSController.h"
 
 @implementation TBAppDelegate
 
@@ -26,14 +27,22 @@
     lWKNavController.navigationBarHidden = YES;
     lWKNavController.tabBarItem = lWKTabBarItem;
     
+    TBWKFeedViewJSController *lWKFeedWebViewController = [[TBWKFeedViewJSController alloc]initWithNibName:@"TBWKFeedViewJSController" bundle:nil];
+    UITabBarItem *lWKFeedTabBarItem = [[UITabBarItem alloc] initWithTitle:@"WKFeedWebView" image:nil tag:1];
+    UINavigationController *lWFeedKNavController = [[UINavigationController alloc] initWithRootViewController:lWKFeedWebViewController];
+    lWFeedKNavController.navigationBarHidden = YES;
+    lWFeedKNavController.tabBarItem = lWKFeedTabBarItem;
+    
+    
+    
     // Setting Tab bar font, color and v-alignnment
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:20.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:13], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
   
     UITabBarController *lTabBarController = [[UITabBarController alloc] init];
-    lTabBarController.viewControllers = [NSArray arrayWithObjects:lUINavController, lWKNavController, nil];
+    lTabBarController.viewControllers = [NSArray arrayWithObjects:lUINavController, lWKNavController, lWFeedKNavController, nil];
     lTabBarController.selectedIndex = 0;
     self.window.rootViewController = lTabBarController;
     

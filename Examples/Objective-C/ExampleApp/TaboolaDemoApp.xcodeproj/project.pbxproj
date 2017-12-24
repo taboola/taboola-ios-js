@@ -25,6 +25,9 @@
 		BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F1186DC363003F45C4 /* ic_launcher_120.png */; };
 		BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F2186DC363003F45C4 /* ic_launcher_144.png */; };
 		BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F3186DC363003F45C4 /* ic_launcher_152.png */; };
+		DB0880C51FEFCA2D00B33B9E /* TBWKFeedViewJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0880C31FEFCA2D00B33B9E /* TBWKFeedViewJSController.m */; };
+		DB0880C61FEFCA2D00B33B9E /* TBWKFeedViewJSController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0880C41FEFCA2D00B33B9E /* TBWKFeedViewJSController.xib */; };
+		DB0880C81FEFCA9900B33B9E /* sampleFeedContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DB0880C71FEFCA9900B33B9E /* sampleFeedContentPage.html */; };
 		DC1F26E51DCB3FED007328B0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1F26E41DCB3FED007328B0 /* WebKit.framework */; };
 		DC472B061FA9EFD30074FBFD /* sampleContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DC4726181FA9EFD10074FBFD /* sampleContentPage.html */; };
 		DC472D921FA9F0030074FBFD /* TBWebViewJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC472D901FA9F0030074FBFD /* TBWebViewJSViewController.m */; };
@@ -76,6 +79,10 @@
 		BCF891F1186DC363003F45C4 /* ic_launcher_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_120.png; sourceTree = "<group>"; };
 		BCF891F2186DC363003F45C4 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
 		BCF891F3186DC363003F45C4 /* ic_launcher_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_152.png; sourceTree = "<group>"; };
+		DB0880C21FEFCA2D00B33B9E /* TBWKFeedViewJSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWKFeedViewJSController.h; sourceTree = "<group>"; };
+		DB0880C31FEFCA2D00B33B9E /* TBWKFeedViewJSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWKFeedViewJSController.m; sourceTree = "<group>"; };
+		DB0880C41FEFCA2D00B33B9E /* TBWKFeedViewJSController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWKFeedViewJSController.xib; sourceTree = "<group>"; };
+		DB0880C71FEFCA9900B33B9E /* sampleFeedContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleFeedContentPage.html; sourceTree = "<group>"; };
 		DC1F26E41DCB3FED007328B0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DC4726181FA9EFD10074FBFD /* sampleContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sampleContentPage.html; sourceTree = "<group>"; };
 		DC472D8F1FA9F0030074FBFD /* TBWebViewJSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWebViewJSViewController.h; sourceTree = "<group>"; };
@@ -195,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				DC4726181FA9EFD10074FBFD /* sampleContentPage.html */,
+				DB0880C11FEFCA2D00B33B9E /* TBWKFeedViewJSController */,
 				DC472D991FA9F03B0074FBFD /* TBWebViewJSViewController */,
 				DC472D9A1FA9F0410074FBFD /* TBWKWebViewJSController */,
 			);
@@ -213,6 +221,17 @@
 				BCF891F3186DC363003F45C4 /* ic_launcher_152.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		DB0880C11FEFCA2D00B33B9E /* TBWKFeedViewJSController */ = {
+			isa = PBXGroup;
+			children = (
+				DB0880C71FEFCA9900B33B9E /* sampleFeedContentPage.html */,
+				DB0880C21FEFCA2D00B33B9E /* TBWKFeedViewJSController.h */,
+				DB0880C31FEFCA2D00B33B9E /* TBWKFeedViewJSController.m */,
+				DB0880C41FEFCA2D00B33B9E /* TBWKFeedViewJSController.xib */,
+			);
+			path = TBWKFeedViewJSController;
 			sourceTree = "<group>";
 		};
 		DC472D991FA9F03B0074FBFD /* TBWebViewJSViewController */ = {
@@ -347,8 +366,10 @@
 				BCF891F6186DC363003F45C4 /* ic_launcher_76.png in Resources */,
 				BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */,
 				DC472B061FA9EFD30074FBFD /* sampleContentPage.html in Resources */,
+				DB0880C81FEFCA9900B33B9E /* sampleFeedContentPage.html in Resources */,
 				BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */,
 				BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */,
+				DB0880C61FEFCA2D00B33B9E /* TBWKFeedViewJSController.xib in Resources */,
 				DC472D931FA9F0030074FBFD /* TBWebViewJSViewController.xib in Resources */,
 				BC9158C3186C7C0600141537 /* InfoPlist.strings in Resources */,
 				DC472D981FA9F0340074FBFD /* TBWKWebViewJSController.xib in Resources */,
@@ -434,6 +455,7 @@
 				BC9158C9186C7C0600141537 /* TBAppDelegate.m in Sources */,
 				BC9158C5186C7C0600141537 /* main.m in Sources */,
 				DC472D921FA9F0030074FBFD /* TBWebViewJSViewController.m in Sources */,
+				DB0880C51FEFCA2D00B33B9E /* TBWKFeedViewJSController.m in Sources */,
 				DC472D971FA9F0340074FBFD /* TBWKWebViewJSController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
