@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import TaboolaSDK
 
-class TBWKWebViewController: UIViewController {
+class TBWKFeedWebViewController: UIViewController {
     var webView:WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +38,14 @@ class TBWKWebViewController: UIViewController {
     }
     
     func loadExamplePage() {
-        let htmlPath = Bundle.main.path(forResource: "sampleContentPage", ofType: "html")
+        let htmlPath = Bundle.main.path(forResource: "sampleFeedContentPage", ofType: "html")
         let appHtml = try! String.init(contentsOfFile: htmlPath!, encoding: String.Encoding.utf8)
         webView.loadHTMLString(appHtml, baseURL: URL(string: "https:"))
     }
 }
 
 // MARK: - TaboolaJSDelegate
-extension TBWKWebViewController: TaboolaJSDelegate {
+extension TBWKFeedWebViewController: TaboolaJSDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         return true
     }
@@ -60,7 +60,7 @@ extension TBWKWebViewController: TaboolaJSDelegate {
 }
 
 // MARK: - UIWebViewDelegate
-extension TBWKWebViewController: WKNavigationDelegate {
+extension TBWKFeedWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("webView did finish navigation")
     }

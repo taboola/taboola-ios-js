@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A93ED1FD6CBD4777B94EB2E2 /* Pods_TaboolaDemoSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */; };
+		DB0880CA1FEFCF8900B33B9E /* TBWKFeedWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0880C91FEFCF8900B33B9E /* TBWKFeedWebViewController.swift */; };
+		DB0880CC1FEFD03900B33B9E /* sampleFeedContentPage.html in Resources */ = {isa = PBXBuildFile; fileRef = DB0880CB1FEFD03900B33B9E /* sampleFeedContentPage.html */; };
 		DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */; };
 		DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */; };
 		DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		3C12AFD93F156E70F3E626CB /* Pods-TaboolaDemoSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB16DFF068C96F6D9AAB83 /* Pods-TaboolaDemoSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0880C91FEFCF8900B33B9E /* TBWKFeedWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBWKFeedWebViewController.swift; sourceTree = "<group>"; };
+		DB0880CB1FEFD03900B33B9E /* sampleFeedContentPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = sampleFeedContentPage.html; path = "../../../Objective-C/ExampleApp/TaboolaDemoApp/TBWKFeedViewJSController/sampleFeedContentPage.html"; sourceTree = "<group>"; };
 		DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC1C9E801E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,8 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				DC9B98D61FAB3206009CC1C0 /* sampleContentPage.html */,
+				DB0880CB1FEFD03900B33B9E /* sampleFeedContentPage.html */,
 				DC9B98C31FAA255F009CC1C0 /* TBUIWebViewController.swift */,
 				DC9B98D81FAB38C1009CC1C0 /* TBWKWebViewController.swift */,
+				DB0880C91FEFCF8900B33B9E /* TBWKFeedWebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 			files = (
 				DC9B98D71FAB3206009CC1C0 /* sampleContentPage.html in Resources */,
 				DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */,
+				DB0880CC1FEFD03900B33B9E /* sampleFeedContentPage.html in Resources */,
 				DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */,
 				DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */,
 			);
@@ -245,6 +252,7 @@
 				DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */,
 				DC9B98D91FAB38C1009CC1C0 /* TBWKWebViewController.swift in Sources */,
 				DC9B98C41FAA255F009CC1C0 /* TBUIWebViewController.swift in Sources */,
+				DB0880CA1FEFCF8900B33B9E /* TBWKFeedWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

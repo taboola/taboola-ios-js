@@ -196,6 +196,7 @@
                     <connections>
                         <segue destination="tdf-8w-Vge" kind="relationship" relationship="viewControllers" id="8Or-SQ-fLY"/>
                         <segue destination="3e8-ds-aVW" kind="relationship" relationship="viewControllers" id="90n-Vd-U30"/>
+                        <segue destination="Wfq-QV-Noh" kind="relationship" relationship="viewControllers" id="hFC-el-eXx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4Y-pg-65f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,6 +525,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYJ-eO-3pQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2804" y="152"/>
+        </scene>
+        <!--WKFeedWebView-->
+        <scene sceneID="dJA-lX-fyj">
+            <objects>
+                <viewController id="Wfq-QV-Noh" customClass="TBWKFeedWebViewController" customModule="TaboolaDemoSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qbd-oh-UKO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z2l-sX-C1O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTS-fW-pee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WKFeedWebView" id="PD1-0F-2LE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXb-Ol-ZNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="1931"/>
         </scene>
     </scenes>
     <resources>
