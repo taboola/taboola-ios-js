@@ -2,7 +2,8 @@
 <head>
     <meta name='viewport' content='width=device-width, user-scalable=no' />
     <script type="text/javascript">
-
+        window._taboola = window._taboola || [];
+        _taboola.push({article:'auto', url:'http://www.example.com'});
         !function (e, f, u, i) {
             if (!document.getElementById(i)){
                 e.async = 1;
@@ -45,13 +46,7 @@ content by the publisher
 </div>
 
 <script type='text/javascript'>
-    window._taboola = window._taboola || [];
-    _taboola["publisher"] = "betterbytheminute-app";
-    _taboola.push({
-        article: 'auto',
-        url: ''
-    });
-
+    
     _taboola.push({
         mode: 'thumbnails-sdk1',
         container: 'taboola1',
@@ -73,7 +68,7 @@ content by the publisher
         allow_sdkless_load:true,
 
         // set view id in order to prevent duplicated between different placements (optional)
-        taboola_view_id:"hello-world",
+        taboola_view_id:new Date().getTime(),
 
         // override publisher from script url
         publisher:"betterbytheminute-app"

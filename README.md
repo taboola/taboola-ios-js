@@ -148,12 +148,12 @@ Your HTML page loaded inside the webview should contain the Taboola mobile JS co
 
 If you are already familiar with the Taboola web JS code, notice that although the Taboola mobile JS code is mostly identical to the Taboola web JS code, there are a few minor modifications that should be made.
 
-Place this code in the `<head>` tag of any HTML page on which you’d like the Taboola widget to appear:
+Place this code in the `<head>` tag of any HTML page on which you’d like the Taboola widget to appear (You can place it also in the `<body>`):
 
 ```javascript
 <script type="text/javascript">
      window._taboola = window._taboola || [];
-     _taboola.push({page-type:received-from-your-Taboola-account-manager:'auto', url:'pass-url-here'});
+     _taboola.push({page-type:'auto', url:'pass-url-here'});
      !function (e, f, u, i) {
           if (!document.getElementById(i)){
                e.async = 1;
@@ -165,7 +165,7 @@ Place this code in the `<head>` tag of any HTML page on which you’d like the T
 </script>
 ```
 
-**'page-type-values-received-from-your-Taboola-account-manager'**: pass the internal app representation of the page as received from Taboola account manager.
+**'page-type'**: pass the internal app representation of the page as received from Taboola account manager.
 
 **'pass-url-here'**: pass the canonical url (web representation) of the app page - this is needed for us to crawl the page to get contextual and meta data
 
@@ -185,7 +185,9 @@ Place this code where you want the widget to appear:
  // Notice - this part is unique to mobile SDK JS integrations!
 _taboola["mobile"] = window._taboola["mobile"] || [];
 _taboola["mobile"].push({
-   publisher:"publisher-id-goes-here"
+        allow_sdkless_load:'sdkless',
+        taboola_view_id:'view id',
+        publisher:'publisher-id-goes-here'
 });
 </script>
 ```
@@ -194,6 +196,10 @@ _taboola["mobile"].push({
 **'mode-name'**: replace it with the mode parameter received from your Taboola account manager
 
 **'Placement Name'**: use the placement name received from your Taboola account manager
+
+**"sdkless"**: (optional) set to 'true' when testing the js on a browser (no sdk).
+
+**"view id"**: (optional) set view id in order to prevent duplicated between different placements (can use:'new Date().getTime()' )
 
 **"publisher-id-goes-here"**: replace it with the publisher ID received from your Taboola account manager.
 
