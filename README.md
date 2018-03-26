@@ -185,7 +185,6 @@ Place this code where you want the widget to appear:
  // Notice - this part is unique to mobile SDK JS integrations!
 _taboola["mobile"] = window._taboola["mobile"] || [];
 _taboola["mobile"].push({
-        allow_sdkless_load:'sdkless',
         taboola_view_id:'view id',
         publisher:'publisher-id-goes-here'
 });
@@ -196,8 +195,6 @@ _taboola["mobile"].push({
 **'mode-name'**: replace it with the mode parameter received from your Taboola account manager
 
 **'Placement Name'**: use the placement name received from your Taboola account manager
-
-**"sdkless"**: (optional) set to 'true' when testing the js on a browser (no sdk).
 
 **"view id"**: (optional) set view id in order to prevent duplicated between different placements (can use:'new Date().getTime()' )
 
