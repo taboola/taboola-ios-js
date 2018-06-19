@@ -209,7 +209,7 @@ Do not forget to register your webview with the native `TaboolaJS`object!
 If you are app already has a webview which contains the Taboola web JS code in it, you can easily migrate with `TaboolaJS` with a few simple steps:
 
 ### 2.1 Javascript changes
-* In your page `<head>` section, change the path of taboola `loader.js` to be `mobile-loader.js`
+* In your page `<head>` section, change the path of taboola `loader.js` to `mobile-loader.js`
 * Add this to your script right before push the configuration to `_taboola` (replace **'publisher-id-goes-here'** with your actual publisher id)
 
 ```javascript
@@ -241,5 +241,5 @@ _taboola.push(user_opt_out, ‘true’);
 ```
 
 ## 6. License
-This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at [https://github.com/taboola/taboola-ios/blob/master/LICENSE](https://github.com/taboola/taboola-ios/blob/master/LICENSE).
+This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree with the terms of the License Agreement.  The full text of the license agreement can be found at [https://github.com/taboola/taboola-ios/blob/master/LICENSE](https://github.com/taboola/taboola-ios/blob/master/LICENSE).
 Copyright 2017 Taboola, Inc.  All rights reserved.
