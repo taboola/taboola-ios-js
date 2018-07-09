@@ -229,6 +229,7 @@ This repository includes an example Android app which uses the `TaboolaJS`. Revi
 ## 4. SDK Reference
 [TaboolaJS Reference](./doc/Taboola%20JS%20SDK%20iOS%20Reference.md)
 
+
 ## 5. GDPR
 In order to support the The EU General Data Protection Regulation (GDPR - https://www.eugdpr.org/) in Taboola Mobile SDK, application developer should show a pop up asking the user's permission for storing their personal data in the App. In order to control the user's personal data (to store in the App or not) there exists a flag `User_opt_out`. It's mandatory to set this flag when using the Taboola SDK. The way to set this flag depends on the type of SDK you are using. By default we assume no permission from the user on a pop up, so the personal data will not be saved.
 
