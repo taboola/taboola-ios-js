@@ -88,7 +88,7 @@ in your `ViewController` code:
 ```
 
 
-### 1.5. Intercepting recommendation clicks
+### 1.4. Intercepting recommendation clicks
 
 `TaboolaJS`, by default, will try to open clicks in `SFSafariViewController`.
 On older iOS versions, where `SFSafariViewController` is not supported, the clicks will be opened in an in-app browser window or in the Safari app.
@@ -133,7 +133,7 @@ The `onItemClick` method will be called every time a user clicks a recommendatio
 
 **Best practice would be to suppress the default behavior for organic items, and instead open the relevant screen in your app which shows that content.**
 
-### 1.6. Receiving load/failure events for widgets
+### 1.5. Receiving load/failure events for widgets
 
 App developers may choose to implement the `TaboolaJSDelegate` optional methods `didLoadPlacementNamed` and `didFailToLoadPlacementNamed` in order to receieve notification when a widget has loaded or failed to load.
 
@@ -146,7 +146,7 @@ Implement these methods in the same object which handles the clicks and implemen
 ```
 
 
-### 1.7. Adding HTML/JS widget within the webview
+### 1.6. Adding HTML/JS widget within the webview
 Your HTML page loaded inside the webview should contain the Taboola mobile JS code in order to bind with the `TaboolaJS` native SDK and actually show the widget.
 
 If you are already familiar with the Taboola web JS code, notice that although the Taboola mobile JS code is mostly identical to the Taboola web JS code, there are a few minor modifications that should be made.
@@ -208,7 +208,7 @@ Do not forget to register your webview with the native `TaboolaJS`object!
 ## 2. Migrating from Taboola plain JS integration
 If you are app already has a webview which contains the Taboola web JS code in it, you can easily migrate with `TaboolaJS` with a few simple steps:
 
-### 2.1 Javascript changes
+### 2.1. Javascript changes
 * In your page `<head>` section, change the path of taboola `loader.js` to `mobile-loader.js`
 * Add this to your script right before push the configuration to `_taboola` (replace **'publisher-id-goes-here'** with your actual publisher id)
 
@@ -219,7 +219,7 @@ _taboola["mobile"].push({
 });
 ```
 
-### 2.1 Native code changes
+### 2.2. Native code changes
 Follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side within your app.
 
 
