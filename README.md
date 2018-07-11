@@ -1,3 +1,5 @@
+# New Document
+
 # Taboola JS widgets in iOS WebViews (TaboolaJS)
 ![Platform](https://img.shields.io/badge/Platform-iOS-green.svg)
 [![Version](https://img.shields.io/cocoapods/v/TaboolaSDK.svg?label=Version)](https://github.com/taboola/taboola-ios-api)
@@ -8,13 +10,14 @@
 2. [Migrating from Taboola plain JS integration](#2-migrating-from-taboola-plain-js-integration)
 3. [Example Apps](#3-example-apps)
 4. [SDK Reference](#4-sdk-reference)
-5. [License](#5-license)
+5. [GDPR](#5-gdpr)
+6. [License](#6-license)
 
 ## 1. Getting Started
 
 `TaboolaJS` SDK integration allows app developers to show Taboola widgets within their own webviews side-to-side with other content from the app.
 
-If you already have a Taboola plain JS widget implemented, you can easily migrate the TaboolaJS and gain the full benefits of using the SDK. The changes required are minimal. Please refer to section 2 [Migrating from Taboola plain JS integration](#2-migrating-from-taboola-plain-js-integration) for more details about how to migrate. 
+If you already have a Taboola plain JS widget implemented, you can easily migrate the TaboolaJS and gain the full benefits of using the SDK. The changes required are minimal. Please refer to section 2 [Migrating from Taboola plain JS integration](#2-migrating-from-taboola-plain-js-integration) for more details about how to migrate.
 
 If you are implementing a new Taboola integration in your app, `TaboolaJS` should be fast and easy to implement, and will give you the benefits of both HTML/JS and native.
 
@@ -55,7 +58,7 @@ Then, run the following command:
 
 ```bash
 $ pod install
-``` 
+```
 
 ### 1.3. Register/Unregister WebViews
 
@@ -70,10 +73,10 @@ in your `ViewController` code:
 ```objc
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+
     // webView must be registered before page is (re)loaded
     [[TaboolaJS sharedInstance] registerWebView:self.webView];
-    
+
     // implement and set TaboolaJSDelegate to receive events (optional)
     [TaboolaJS sharedInstance].delegate = self;
 }
@@ -83,9 +86,9 @@ in your `ViewController` code:
 // [[TaboolaJS sharedInstance] unregisterWebView:self.webView];
 
 ```
-       
 
-### 1.5. Intercepting recommendation clicks
+
+### 1.4. Intercepting recommendation clicks
 
 `TaboolaJS`, by default, will try to open clicks in `SFSafariViewController`.
 On older iOS versions, where `SFSafariViewController` is not supported, the clicks will be opened in an in-app browser window or in the Safari app.
@@ -117,7 +120,7 @@ For example, you may choose to implement `TaboolaJSDelegate` in your view contro
 
 Set the delegate correctly on the `TaboolaJS` SharedInstance:
 
-```   
+```
 [TaboolaJS sharedInstance].delegate = self;
 ```
 
@@ -130,11 +133,11 @@ The `onItemClick` method will be called every time a user clicks a recommendatio
 
 **Best practice would be to suppress the default behavior for organic items, and instead open the relevant screen in your app which shows that content.**
 
-### 1.6. Receiving load/failure events for widgets
+### 1.5. Receiving load/failure events for widgets
 
 App developers may choose to implement the `TaboolaJSDelegate` optional methods `didLoadPlacementNamed` and `didFailToLoadPlacementNamed` in order to receieve notification when a widget has loaded or failed to load.
 
-Implement these methods in the same object which handles the clicks and implements  `TaboolaJSDelegate` 
+Implement these methods in the same object which handles the clicks and implements  `TaboolaJSDelegate`
 
 ```
 - (void)webView:(WebView) webView didLoadPlacementNamed:(NSString*) placementName withHeight:(CGFloat)height;
@@ -143,8 +146,8 @@ Implement these methods in the same object which handles the clicks and implemen
 ```
 
 
-### 1.7. Adding HTML/JS widget within the webview
-Your HTML page loaded inside the webview should contain the Taboola mobile JS code in order to bind with the `TaboolaJS` native SDK and actually show the widget. 
+### 1.6. Adding HTML/JS widget within the webview
+Your HTML page loaded inside the webview should contain the Taboola mobile JS code in order to bind with the `TaboolaJS` native SDK and actually show the widget.
 
 If you are already familiar with the Taboola web JS code, notice that although the Taboola mobile JS code is mostly identical to the Taboola web JS code, there are a few minor modifications that should be made.
 
@@ -170,18 +173,18 @@ Place this code in the `<head>` tag of any HTML page on which you’d like the T
 **'pass-url-here'**: pass the canonical url (web representation) of the app page - this is needed for us to crawl the page to get contextual and meta data
 
 **'publisher-id'**: replace it with the publisher ID received from your Taboola account manager.
- 
+
 Place this code where you want the widget to appear:
 
 ```html
 <div id="container-id"></div>
 <script type="text/javascript">
      window._taboola = window._taboola || [];
-     _taboola.push({mode: 'mode-name', 
-     	container: 'container-id', 
-     	placement: 'Placement Name', 
+     _taboola.push({mode: 'mode-name',
+     	container: 'container-id',
+     	placement: 'Placement Name',
      	target_type: 'mix'});
-     
+
  // Notice - this part is unique to mobile SDK JS integrations!
 _taboola["mobile"] = window._taboola["mobile"] || [];
 _taboola["mobile"].push({
@@ -205,8 +208,8 @@ Do not forget to register your webview with the native `TaboolaJS`object!
 ## 2. Migrating from Taboola plain JS integration
 If you are app already has a webview which contains the Taboola web JS code in it, you can easily migrate with `TaboolaJS` with a few simple steps:
 
-### 2.1 Javascript changes
-* In your page `<head>` section, change the path of taboola `loader.js` to be `mobile-loader.js`
+### 2.1. Javascript changes
+* In your page `<head>` section, change the path of taboola `loader.js` to `mobile-loader.js`
 * Add this to your script right before push the configuration to `_taboola` (replace **'publisher-id-goes-here'** with your actual publisher id)
 
 ```javascript
@@ -216,9 +219,9 @@ _taboola["mobile"].push({
 });
 ```
 
-### 2.1 Native code changes
+### 2.2. Native code changes
 Follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side within your app.
- 
+
 
 ## 3. Example App
 This repository includes an example Android app which uses the `TaboolaJS`. Review it and see how `TaboolaJS` is integrated in practice.
@@ -227,23 +230,15 @@ This repository includes an example Android app which uses the `TaboolaJS`. Revi
 [TaboolaJS Reference](./doc/Taboola%20JS%20SDK%20iOS%20Reference.md)
 
 ## 5. GDPR
-
-In order to support the The EU General Data Protection Regulation (GDPR - https://www.eugdpr.org/) in Taboola Mobile SDK,capplication developer should show a pop up asking the user's permission for storing their personal data in the App. In order to control the user's personal data(to store in the App or not) there exists a flag `User_opt_out`. It's mandatory to set this flag when using the Taboola SDK. The way to set this flag depends on the type of SDK you are using. By default we assume no permission from the user on a pop up, so the personal data will not be saved.
-
+In order to support the The EU General Data Protection Regulation (GDPR - https://www.eugdpr.org/) in Taboola Mobile SDK, application developer should show a pop up asking the user's permission for storing their personal data in the App. In order to control the user's personal data (to store in the App or not) there exists a flag `User_opt_out`. It's mandatory to set this flag when using the Taboola SDK. The way to set this flag depends on the type of SDK you are using. By default we assume no permission from the user on a pop up, so the personal data will not be saved.
 
 ### 5.1. How to set the flag in the SDK integration
+Below you can find the way how to set the flag on SDK JS we support. It's recommended to put these lines alongside the other settings, such as publisher name, etc
 
-Below you can find the way how to set the flag on iOS SDK Standard we support.
-It's recommended to put these lines alongside the other settings, such as publisher name, etc
-
-```javascript
-_taboola = window._taboola || [];
-_taboola.push({
-   user_opt_out:"true"
-});
+In the HTML file that contains the JS with publisher details, you will need to add:
 ```
-
-
+_taboola.push(user_opt_out, ‘true’);
+```
 ## 6. License
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at [https://github.com/taboola/taboola-ios/blob/master/LICENSE](https://github.com/taboola/taboola-ios/blob/master/LICENSE).
 Copyright 2017 Taboola, Inc.  All rights reserved.
