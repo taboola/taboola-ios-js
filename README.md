@@ -1,5 +1,3 @@
-# New Document
-
 # Taboola JS widgets in iOS WebViews (TaboolaJS)
 ![Platform](https://img.shields.io/badge/Platform-iOS-green.svg)
 [![Version](https://img.shields.io/cocoapods/v/TaboolaSDK.svg?label=Version)](https://github.com/taboola/taboola-ios-api)
