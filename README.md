@@ -71,6 +71,13 @@ in your `ViewController` code:
 ```objc
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Optional but important for video!
+    // To show video ads please add this code
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    [config setAllowsInlineMediaPlayback:YES];
+    [config.preferences setJavaScriptCanOpenWindowsAutomatically:YES];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
 
     // webView must be registered before page is (re)loaded
     [[TaboolaJS sharedInstance] registerWebView:self.webView];
