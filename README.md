@@ -240,9 +240,20 @@ In order to support the The EU General Data Protection Regulation (GDPR - https:
 ### 5.1. How to set the flag in the SDK integration
 Below you can find the way how to set the flag on SDK JS we support. It's recommended to put these lines alongside the other settings, such as publisher name, etc
 
-In the HTML file that contains the JS with publisher details, you will need to add:
-```
-_taboola.push(user_opt_out, ‘true’);
+In the head you will need to add:
+```javascript
+<script type="text/javascript">
+     window._taboola = window._taboola || [];
+     _taboola.push({page-type:'auto', url:'pass-url-here',user_opt_out: 'true'});
+     !function (e, f, u, i) {
+          if (!document.getElementById(i)){
+               e.async = 1;
+               e.src = u;
+               e.id = i;
+               f.parentNode.insertBefore(e, f);
+          }
+     }(document.createElement('script'),document.getElementsByTagName('script')[0],'//cdn.taboola.com/libtrc/publisher-id/mobile-loader.js','tb_mobile_loader_script');
+</script>
 ```
 ## 6. License
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at [https://github.com/taboola/taboola-ios/blob/master/LICENSE](https://github.com/taboola/taboola-ios/blob/master/LICENSE).
