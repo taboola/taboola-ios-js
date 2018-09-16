@@ -79,7 +79,10 @@ in your `ViewController` code:
     [config.preferences setJavaScriptCanOpenWindowsAutomatically:YES];
     self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
 
-    // webView must be registered before page is (re)loaded
+   ** From version 2.0.30 use:
+   [[TaboolaJS sharedInstance] registerWebView:self.webView withDelegate:self];
+   
+   ** Before 2.0.30 use:
     [[TaboolaJS sharedInstance] registerWebView:self.webView];
 
     // implement and set TaboolaJSDelegate to receive events (optional)
