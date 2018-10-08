@@ -233,7 +233,7 @@ Follow the instructions on steps 1.1 to 1.6 to configure `TaboolaJS` native side
 
 
 ## 3. Example App
-This repository includes an example Android app which uses the `TaboolaJS`. Review it and see how `TaboolaJS` is integrated in practice.
+This repository includes an example iOS app which uses the `TaboolaJS`. Review it and see how `TaboolaJS` is integrated in practice.
 
 ## 4. SDK Reference
 [TaboolaJS Reference](./doc/Taboola%20JS%20SDK%20iOS%20Reference.md)
