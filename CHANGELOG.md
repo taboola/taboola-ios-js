@@ -1,5 +1,5 @@
 
-## [2.0.31] - 2018-12-19
+## [2.0.34] - 2018-12-19
 ### Fixed
 - Avoided a rare situation of memory leak upon destroy
 
