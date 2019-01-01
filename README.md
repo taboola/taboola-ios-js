@@ -42,7 +42,7 @@ To integrate Taboola into your Xcode project using CocoaPods, specify it in your
 * Objective-C
 
    ```
-   pod 'TaboolaSDK'
+   pod 'TaboolaSDK', '2.1.0'
    ```
 
 * Swift
